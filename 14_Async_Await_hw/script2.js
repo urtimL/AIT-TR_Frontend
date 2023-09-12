@@ -5,7 +5,7 @@ const BAS_URL = "https://jsonplaceholder.typicode.com";
 async function fetchUsers() {
     try {
         const response = await fetch(`${BAS_URL}/users`);
-        const users = response.json();
+        const users = await response.json();
 
         return users;
     } catch (error) {
