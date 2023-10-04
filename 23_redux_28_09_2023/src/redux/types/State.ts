@@ -2,7 +2,7 @@ export interface CounterState {
     value: number;
 }
 
-export interface SandwicState {
+export interface SandwichState {
     ingredients: string;
 }
 

@@ -30,7 +30,7 @@ export default function booksReducer(
                 ...state, 
                 books: state.books.map(book => {
                     if (book.isbn === action.payload.isbn) {
-                        return (...book, title: action.payload.title);
+                        return {...book, title: action.payload.title};
                     }
                     return book;
             })}

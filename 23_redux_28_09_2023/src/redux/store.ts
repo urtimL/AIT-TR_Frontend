@@ -7,7 +7,7 @@ const store = createStore(
     combineReducers({
         counter: counterReducer,
         sandwich: sandwichReducer,
-        books: booksReducer
+        books: booksReducer,
     })
 );
 

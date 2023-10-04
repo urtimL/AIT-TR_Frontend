@@ -1,19 +1,23 @@
 import { ActionSandwich } from "../types/Action";
-import { SandwicState } from "../types/State";
+import { SandwichState } from "../types/State";
 
-const initialState: SandwicState = {
-    ingredients: ''
-}
+const initialState: SandwichState = {
+    ingredients: "",
+};
 
-export default function sandwichReducertsts(
-    state = initialState, 
-    action: ActionSandwich): SandwicState {
-        switch (action.type) {
-            case 'sandwich/addIngredient':
-                return {...state, ingredients: `${state.ingredients} ${action.payload}`}
-            case 'sandwich/clear' :
-                return {...state, ingredients: ''}
-            default:
-                return state;
-        }
+export default function sandwichReducer(
+    state = initialState,
+    action: ActionSandwich
+): SandwichState {
+    switch (action.type) {
+        case "sandwich/addIngredient":
+            return {
+                ...state,
+                ingredients: `${state.ingredients} ${action.payload}`,
+            };
+        case "sandwich/clear":
+            return { ...state, ingredients: "" };
+        default:
+            return state;
+    }
 }
